@@ -1,0 +1,9 @@
+dubbo:
+  application:
+    name: hello
+    logger: slf4j
+  protocol:
+    name: dubbo
+    port: 8081
+  registry:
+    address: zookeeper://127.0.0.1:2181
