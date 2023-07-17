@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/order?createDatabaseIfNotExist=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: seata-order
+
+dubbo:
+  application:
+    name: seata-order
+    logger: slf4j
+    qos-enable: false
+  protocol:
+    name: dubbo
+    port: 8082
+  registry:
+    address: zookeeper://127.0.0.1:2181
+
+seata:
+  service:
+    vgroup-mapping:
+      default_tx_group: default
+    grouplist:
+      default: 127.0.0.1:8091

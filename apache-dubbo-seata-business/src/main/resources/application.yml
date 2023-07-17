@@ -1,0 +1,22 @@
+
+
+dubbo:
+  application:
+    name: seata-business
+    logger: slf4j
+    qos-enable: false
+  protocol:
+    name: dubbo
+    port: 8084
+  registry:
+    address: zookeeper://127.0.0.1:2181
+
+seata:
+  service:
+    vgroup-mapping:
+      default_tx_group: default
+    grouplist:
+      default: 127.0.0.1:8091
+spring:
+  application:
+    name: seata-business

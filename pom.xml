@@ -9,6 +9,13 @@
         <module>apache-dubbo-hello-api</module>
         <module>apache-dubbo-hello-trigger</module>
         <module>apache-dubbo-hello-app</module>
+        <module>apache-dubbo-nacos</module>
+        <module>apache-dubbo-seata-api</module>
+        <module>apache-dubbo-seata-account</module>
+        <module>apache-dubbo-seata-order</module>
+        <module>apache-dubbo-seata-storage</module>
+        <module>apache-dubbo-embeded-zookeeper</module>
+        <module>apache-dubbo-seata-business</module>
     </modules>
     <packaging>pom</packaging>
     <name>demo</name>
@@ -19,6 +26,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <dubbo.version>3.1.8</dubbo.version>
         <spring-boot.version>2.7.10</spring-boot.version>
+        <seata.version>1.7.0</seata.version>
+        <mysql.version>8.0.30</mysql.version>
     </properties>
 
 
@@ -57,6 +66,25 @@
                 <groupId>com.example</groupId>
                 <artifactId>apache-dubbo-hello-api</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.dubbo/dubbo-registry-nacos -->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-registry-nacos</artifactId>
+                <version>3.2.3</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.seata</groupId>
+                <artifactId>seata-spring-boot-starter</artifactId>
+                <version>${seata.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
             </dependency>
 
         </dependencies>
